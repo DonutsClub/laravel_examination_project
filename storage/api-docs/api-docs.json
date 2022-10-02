@@ -1,0 +1,121 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Laravel examination",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/country/all": {
+            "get": {
+                "description": "Get the list of all countries",
+                "operationId": "aa5a708d9faafc99566c1d05a74d592d",
+                "responses": {
+                    "200": {
+                        "description": "Successful"
+                    }
+                }
+            }
+        },
+        "/api/country/show": {
+            "get": {
+                "description": "Get exact country",
+                "operationId": "ec070f4c81247f9a7b836f1e96fabeb4",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful"
+                    },
+                    "404": {
+                        "description": "Not found"
+                    },
+                    "406": {
+                        "description": "Not acceptable"
+                    }
+                }
+            }
+        },
+        "/api/country/store": {
+            "post": {
+                "description": "Create new record with country information",
+                "operationId": "c9ba5a14acb882dac0ffa9b4fa9ceb18",
+                "parameters": [
+                    {
+                        "name": "alias",
+                        "in": "query"
+                    },
+                    {
+                        "name": "name",
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful"
+                    },
+                    "406": {
+                        "description": "Not acceptable"
+                    }
+                }
+            }
+        },
+        "/api/country/update": {
+            "put": {
+                "description": "Update existing records about the country",
+                "operationId": "91319742e0286eac73c12923adf01110",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query"
+                    },
+                    {
+                        "name": "alias",
+                        "in": "query"
+                    },
+                    {
+                        "name": "name",
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful"
+                    },
+                    "404": {
+                        "description": "Not found"
+                    },
+                    "406": {
+                        "description": "Not acceptable"
+                    }
+                }
+            }
+        },
+        "/api/country/delete": {
+            "delete": {
+                "description": "Delete a country record",
+                "operationId": "2a0d67587f6bc804720d2f478604e724",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful"
+                    },
+                    "404": {
+                        "description": "Not found"
+                    },
+                    "406": {
+                        "description": "Not acceptable"
+                    }
+                }
+            }
+        }
+    }
+}
